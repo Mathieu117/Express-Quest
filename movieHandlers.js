@@ -3,7 +3,7 @@ const database = require("./database");
 const getUsers = (req, res) => {
   let sql = "select * from users";
   const sqlValues = [];
-
+  res.sendStatus(200);
   if (req.query.language != null) {
     sql += " where language = ?";
     sqlValues.push(req.query.language);
